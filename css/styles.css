@@ -18,6 +18,12 @@ body {
     font-size: 14px;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* глобальный сброс margin, padding */
 h1,
 h2,
@@ -59,9 +65,6 @@ ul {
     font-size: 26px;
     line-height: 1.19;
     color: var(--accent-color);
-    display: flex;
-    align-items: center;
-    text-align: center;
 }
 
 .logo-white {
@@ -107,6 +110,13 @@ ul {
 .header-nav-list {
     display: flex;
     margin-left: 94px;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    margin-left: 94px;
+    align-items: center;
 }
 
 .header-nav-item:not(:last-child) {
@@ -169,12 +179,11 @@ ul {
 
 .portfolio-btn {
     display: inline-block;
-    border: 1px solid transparent;
+    border: none;
     border-radius: 4px;
     padding: 6px 22px;
     font-family: inherit;
     letter-spacing: 0.03em;
-    margin: 5px;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.63;
@@ -217,9 +226,8 @@ ul {
 
 .portfolio-border {
     border: 1px solid #EEEEEE;
-    border-top: transparent;
+    border-top: none;
     padding: 20px 24px;
-    margin-top: -4px;
 }
 
 
@@ -235,9 +243,13 @@ ul {
     flex-wrap: nowrap;
 }
 
-.studio-presentation-item:not(:last-child) {
+.studio-presentation-item {
     margin-right: 30px;
-    max-width: 270px;
+    width: 270px;
+}
+
+.studio-presentation-item:last-child {
+    margin: 0px 30px;
 }
 
 .studio-header {
@@ -267,7 +279,6 @@ ul {
     min-width: 216px;
     padding: 10px 32px;
     border-radius: 4px;
-    border: 1px solid transparent;
 
     font-family: inherit;
     font-weight: 700;
@@ -333,9 +344,12 @@ ul {
     flex-wrap: nowrap;
 }
 
-.team-item {
+/* .team-item {
     margin-right: 30px;
-    margin-top: 50px;
+} */
+
+.team-item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .team-list .team-item {
@@ -350,11 +364,11 @@ ul {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    margin-bottom: 50px;
 
 }
 
 .employee-name-title {
-    margin-top: 30px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.17;
@@ -363,7 +377,6 @@ ul {
 }
 
 .employee-text {
-    margin-bottom: 30px;
     margin-top: 10px;
     font-weight: 400;
     font-size: 16px;
@@ -371,6 +384,11 @@ ul {
     text-align: center;
     color: var(--secondary-text-color);
 
+}
+
+.employee-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -388,7 +406,7 @@ ul {
     color: var(--white-text-color);
 }
 
-.footer-contact-item {
+.footer-contact-item:not(:last-child) {
     margin-top: 9px;
 }
 
